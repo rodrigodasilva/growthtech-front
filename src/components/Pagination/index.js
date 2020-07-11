@@ -10,13 +10,16 @@ const Paginate = ({ currentPage, lastPage, onLoadMore, isLoading }) => {
       <span>
         {currentPage} de {lastPage}
       </span>
-      <Button
-        onClick={() => onLoadMore(currentPage + 1)}
-        disabled={currentPage === lastPage}
-        isLoading={isLoading}
-      >
-        Carregar mais
-      </Button>
+
+      {currentPage < lastPage && (
+        <Button
+          onClick={() => onLoadMore(currentPage + 1)}
+          disabled={currentPage === lastPage}
+          isLoading={isLoading}
+        >
+          Carregar mais
+        </Button>
+      )}
     </Container>
   );
 };

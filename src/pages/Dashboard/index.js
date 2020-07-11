@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Posts from '../../components/Posts';
 import Pagination from '../../components/Pagination';
 import Filters from './Filters';
+import Posts from './Posts';
 
 import { Container, PostsContainer } from './styles';
 
@@ -18,7 +18,7 @@ const Dashboard = () => {
   });
 
   const { usersList, loadingList } = useSelector(({ users }) => users);
-  // console.log(usersList);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const Dashboard = () => {
       page: 1,
     });
   };
-  console.log(filters);
+
   return (
     <Container>
       <Filters
@@ -43,8 +43,8 @@ const Dashboard = () => {
       />
 
       <PostsContainer>
-        {usersList.users &&
-          !!usersList.users.length &&
+        {!!usersList.users &&
+          // !!usersList.users.length &&
           usersList.users.map(user => <Posts key={user.id} user={user} />)}
 
         {usersList.users && !!usersList.users.length && (

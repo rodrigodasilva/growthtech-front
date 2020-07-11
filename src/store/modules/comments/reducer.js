@@ -4,7 +4,7 @@ import types from './types';
 
 const INITIAL_STATE = {
   loadingList: true,
-  usersList: [],
+  comments: [],
 };
 
 export default function user(state = INITIAL_STATE, action) {
@@ -15,7 +15,7 @@ export default function user(state = INITIAL_STATE, action) {
         break;
       }
       case types.LIST_SUCCESS: {
-        draft.usersList = action.payload.users;
+        draft.comments = action.payload.comments;
         draft.loadingList = false;
         break;
       }

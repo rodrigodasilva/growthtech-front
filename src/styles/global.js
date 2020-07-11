@@ -118,6 +118,7 @@ const GlobalStyles = createGlobalStyle`
     --secondary-text: #b0b3b8;
     --hover-overlay: rgba(255, 255, 255, 0.1);
     --shadow-2: rgba(0, 0, 0, 0.2);
+    --comment-background: #3a3b3c;
   }
 
 

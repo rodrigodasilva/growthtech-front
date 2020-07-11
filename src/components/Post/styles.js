@@ -53,19 +53,21 @@ export const Post = styled.section`
   }
 `;
 
-export const Comments = styled.footer`
+export const CommentsButton = styled.footer`
   color: var(--secondary-text);
-  padding: 6px 20px;
   font-size: 16px;
+  text-align: left;
   cursor: pointer;
+  padding: 6px 0;
+  width: max-content;
+  display: flex;
+  align-items: center;
 
   :hover {
-    background: var(--hover-overlay);
-    border-radius: 4px;
-    transition: 400ms cubic-bezier(0.08, 0.52, 0.52, 1) transform;
+    opacity: 0.8;
   }
 
-  svg {
-    margin-right: 4px;
+  span {
+    margin: 0 8px;
   }
 `;
