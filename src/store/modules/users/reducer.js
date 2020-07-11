@@ -3,9 +3,9 @@ import produce from 'immer';
 import types from './types';
 
 const INITIAL_STATE = {
-  loadingList: false,
+  loadingList: true,
   usersList: [],
-  loadingUserShow: false,
+  loadingUserShow: true,
   user: {},
 };
 
@@ -42,8 +42,8 @@ export default function user(state = INITIAL_STATE, action) {
 
       case types.RESET_USERS_STATE: {
         draft.usersList = [];
-        draft.loadingUserShow = false;
-        draft.loadingList = false;
+        draft.loadingUserShow = true;
+        draft.loadingList = true;
         draft.user = {};
         break;
       }

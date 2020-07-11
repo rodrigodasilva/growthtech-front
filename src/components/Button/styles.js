@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.button`
   cursor: pointer;
-  padding: 10px 12px;
+  padding: 8px 12px;
   border: none;
   border-radius: 4px;
   font-size: 14px;
@@ -18,6 +18,7 @@ export const Container = styled.button`
 
   :disabled {
     cursor: not-allowed;
+    opacity: 0.5;
   }
 `;
 

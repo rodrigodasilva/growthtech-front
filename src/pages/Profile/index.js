@@ -9,7 +9,10 @@ import Post from '../../components/Post';
 import Filters from './Filters';
 
 import { listByUserRequest } from '../../store/modules/posts/actions';
-import { showUserRequest } from '../../store/modules/users/actions';
+import {
+  showUserRequest,
+  resetUsersState,
+} from '../../store/modules/users/actions';
 
 import {
   Container,
@@ -33,6 +36,8 @@ const Profile = () => {
 
   useEffect(() => {
     dispatch(showUserRequest({ userId }));
+
+    return () => dispatch(resetUsersState());
   }, [dispatch, userId]);
 
   useEffect(() => {

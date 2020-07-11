@@ -7,7 +7,7 @@ export const Container = styled.section`
   background: var(--surface-background);
   border-radius: 10px;
   box-shadow: 0 1px 2px var(--shadow-2);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   padding: 20px;
 `;
 
@@ -31,6 +31,7 @@ export const User = styled.header`
     color: var(--secondary-text);
     font-size: 14px;
     margin-bottom: 3px;
+    max-width: max-content;
 
     display: flex;
     align-items: center;

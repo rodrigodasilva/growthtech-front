@@ -12,10 +12,6 @@ export const Container = styled.div`
 
   color: var(--primary-text);
 
-  @media only screen and (max-width: 900px) {
-    width: 100%;
-  }
-
   h5 {
     font-weight: bold;
   }
@@ -24,25 +20,28 @@ export const Container = styled.div`
     padding: 3px 0;
 
     + fieldset {
-      margin-top: 18px;
+      margin-top: 12px;
+    }
+
+    legend {
+      font-size: 14px;
+      width: auto;
+      margin: 0;
+    }
+
+    input {
+      font-size: 14px;
+      background: var(--comment-background);
+      border-radius: 8px;
+      padding: 10px;
+      color: var(--primary-text);
+      border: none;
+      outline: none;
+      width: 100%;
     }
   }
 
-  legend {
-    font-size: 14px;
-    width: auto;
-    margin: 0;
-  }
-
-  input {
-    margin-bottom: 6px;
-    font-size: 14px;
-    background: var(--comment-background);
-    border-radius: 8px;
-    padding: 10px;
-    color: var(--primary-text);
-    border: none;
-    outline: none;
+  @media only screen and (max-width: 745px) {
     width: 100%;
   }
 `;
@@ -51,5 +50,7 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+
+  font-size: 16px;
 `;

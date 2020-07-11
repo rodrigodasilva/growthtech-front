@@ -3,15 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background: var(--surface-background);
   border-radius: 10px;
-  box-shadow: 0 1px 2px var(--shadow-2);
   margin-bottom: 14px;
   padding: 20px;
-
+  box-shadow: 0 1px 2px var(--shadow-2);
   color: var(--primary-text);
-
-  @media only screen and (max-width: 900px) {
-    width: 100%;
-  }
 
   input {
     font-size: 15px;
@@ -34,5 +29,6 @@ export const Header = styled.header`
   h5 {
     font-weight: bold;
     margin-right: 12px;
+    font-size: 18px;
   }
 `;

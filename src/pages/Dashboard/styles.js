@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+
+  @media only screen and (max-width: 745px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const PostsContainer = styled.div`

@@ -23,3 +23,7 @@ export const showSuccess = user => ({
 export const showFailure = () => ({
   type: types.SHOW_FAILURE,
 });
+
+export const resetUsersState = () => ({
+  type: types.RESET_USERS_STATE,
+});

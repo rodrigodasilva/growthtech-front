@@ -2,40 +2,52 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+
+  @media only screen and (max-width: 820px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const ProfileInfo = styled.section`
   display: flex;
   flex-direction: column;
-  background: var(--surface-background);
   border-radius: 10px;
-  box-shadow: 0 1px 2px var(--shadow-2);
-  margin: 0 6px;
   padding: 20px;
-  height: max-content;
-  width: 500px;
-
+  margin: 0 6px 12px;
+  background: var(--surface-background);
   color: var(--primary-text);
+  box-shadow: 0 1px 2px var(--shadow-2);
+
+  height: max-content;
+  width: 40%;
+
+  @media only screen and (max-width: 820px) {
+    width: 100%;
+  }
 
   h2 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
   }
 
   h3 {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: normal;
     margin-bottom: 22px;
   }
 
   p {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 8px;
     display: flex;
     align-items: center;
 
     span {
       margin: 0 8px;
+    }
+
+    strong {
+      word-break: break-word;
     }
   }
 `;
