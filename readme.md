@@ -1,13 +1,21 @@
-Como rodar
+## Como usar
 
-- Instalamos as dependências
+#### Pré-requisitos
 
-  > yarn
+Ferramentas
 
-- Iniciamos o servidor fake
+- Yarn/Npm
 
-  > yarn json-server --watch server.json -p 3333
+Serviços
 
-- Iniciamos a aplicação feita em reactjs
+- [Ter a api rodando](https://github.com/rodrigodasilva/growthtech-api)
 
-  > yarn start
+#### Rodando a aplicação
+
+1. Rodamos o comando yarn para fazer a instalação das dependências passadas no package.json
+
+   > yarn
+
+2. Rodamos a aplicação da api
+
+   > yarn dev
