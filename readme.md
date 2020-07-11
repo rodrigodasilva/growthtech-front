@@ -16,6 +16,6 @@ Serviços
 
    > yarn
 
-2. Rodamos a aplicação da api
+2. Rodamos a aplicação
 
-   > yarn dev
+   > yarn start
