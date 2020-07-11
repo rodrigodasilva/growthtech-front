@@ -5,7 +5,7 @@ import { Spinner } from 'react-activity';
 
 import { Container, Header } from './styles';
 
-const DidNumbersFilters = ({ onChange, isLoading }) => {
+const UsersFilter = ({ onChange, isLoading }) => {
   const handleSearchWithDebounce = useRef(
     debounce(filter => {
       onChange(filter);
@@ -50,8 +50,9 @@ const DidNumbersFilters = ({ onChange, isLoading }) => {
   );
 };
 
-DidNumbersFilters.propTypes = {
+UsersFilter.propTypes = {
   onChange: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 };
 
-export default DidNumbersFilters;
+export default UsersFilter;

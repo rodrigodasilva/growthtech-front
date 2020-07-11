@@ -11,7 +11,8 @@ export const Comment = styled.section`
   color: var(--primary-text);
   padding: 12px 12px;
   border-radius: 18px;
-  width: max-content;
+  max-width: max-content;
+  width: 100%;
 `;
 
 export const CommentHeader = styled.header`

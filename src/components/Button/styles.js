@@ -8,6 +8,7 @@ export const Container = styled.button`
   font-size: 14px;
   color: ${({ isLoading }) => (isLoading ? 'transparent' : '#fff')};
   background: var(--primary-button-background);
+  outline: none;
 
   position: relative;
 

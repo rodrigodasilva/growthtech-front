@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Spinner } from 'react-activity';
 
 import Pagination from '../../components/Pagination';
 import Filters from './Filters';
 import Posts from './Posts';
 
-import { Container, PostsContainer } from './styles';
+import {
+  Container,
+  PostsContainer,
+  LoadingContainer,
+  MessageContainer,
+} from './styles';
 
 import { listRequest } from '../../store/modules/users/actions';
 
@@ -25,8 +31,6 @@ const Dashboard = () => {
     dispatch(listRequest(filters));
   }, [dispatch, filters]);
 
-  console.log('dashboard');
-
   const handleFilter = filter => {
     setFilters({
       ...filters,
@@ -39,23 +43,36 @@ const Dashboard = () => {
     <Container>
       <Filters
         onChange={filter => handleFilter(filter)}
-        isLoading={usersList.users && !!usersList.users.length && loadingList}
+        isLoading={loadingList && !!usersList.users}
       />
 
       <PostsContainer>
-        {!!usersList.users &&
-          // !!usersList.users.length &&
-          usersList.users.map(user => <Posts key={user.id} user={user} />)}
+        {!loadingList && usersList.users && !usersList.users.length && (
+          <MessageContainer>
+            <h4>Nenhum post encontrado</h4>
+          </MessageContainer>
+        )}
 
-        {usersList.users && !!usersList.users.length && (
-          <Pagination
-            currentPage={filters.page}
-            lastPage={usersList.last}
-            onLoadMore={page =>
-              setFilters(oldFilters => ({ ...oldFilters, page }))
-            }
-            isLoading={loadingList}
-          />
+        {loadingList && !usersList.users ? (
+          <LoadingContainer>
+            <Spinner size={16} />
+          </LoadingContainer>
+        ) : (
+          <>
+            {!!usersList.users &&
+              usersList.users.map(user => <Posts key={user.id} user={user} />)}
+
+            {usersList.users && !!usersList.users.length && (
+              <Pagination
+                currentPage={filters.page}
+                lastPage={usersList.last}
+                onLoadMore={page =>
+                  setFilters(oldFilters => ({ ...oldFilters, page }))
+                }
+                isLoading={loadingList}
+              />
+            )}
+          </>
         )}
       </PostsContainer>
     </Container>

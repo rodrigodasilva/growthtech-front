@@ -1,8 +1,8 @@
 import { all } from 'redux-saga/effects';
 
 import users from './users/sagas';
-import comments from './comments/sagas';
+import posts from './posts/sagas';
 
 export default function* rootSaga() {
-  return yield all([users, comments]);
+  return yield all([users, posts]);
 }

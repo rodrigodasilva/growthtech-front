@@ -2,6 +2,11 @@ const Types = {
   LIST_REQUEST: '@users/LIST_REQUEST',
   LIST_FAILURE: '@users/LIST_FAILURE',
   LIST_SUCCESS: '@users/LIST_SUCCESS',
+
+  SHOW_REQUEST: '@users/SHOW_REQUEST',
+  SHOW_FAILURE: '@users/SHOW_FAILURE',
+  SHOW_SUCCESS: '@users/SHOW_SUCCESS',
+  RESET_USERS_STATE: '@users/RESET_USERS_STATE',
 };
 
 export default Types;

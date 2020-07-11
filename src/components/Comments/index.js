@@ -1,21 +1,9 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-
-import { listRequest } from '../../store/modules/comments/actions';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Container, Comment, CommentHeader, CommentBody } from './styles';
 
-const Comments = ({ postId, isOpen }) => {
-  const { comments } = useSelector(({ comments }) => comments);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (postId) {
-      dispatch(listRequest({ postId }));
-    }
-  }, [postId, dispatch]);
-
+const Comments = ({ isOpen, comments }) => {
   return (
     <Container isOpen={isOpen}>
       {comments &&
@@ -30,6 +18,16 @@ const Comments = ({ postId, isOpen }) => {
         ))}
     </Container>
   );
+};
+
+Comments.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      email: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default Comments;

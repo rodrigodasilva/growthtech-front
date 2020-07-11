@@ -1,6 +1,6 @@
 import React from 'react';
 import ScrollUpButton from 'react-scroll-up-button';
-import { FaAngleDoubleUp } from 'react-icons/fa';
+import { FaAngleUp } from 'react-icons/fa';
 
 import { Container } from './styles';
 
@@ -11,7 +11,7 @@ export default function BackToTop() {
         ContainerClassName="button-container"
         TransitionClassName="button-transition"
       >
-        <FaAngleDoubleUp color="#fff" size={20} />
+        <FaAngleUp color="#fff" size={20} />
       </ScrollUpButton>
     </Container>
   );

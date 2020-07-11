@@ -7,7 +7,7 @@ export const Container = styled.section`
   background: var(--surface-background);
   border-radius: 10px;
   box-shadow: 0 1px 2px var(--shadow-2);
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   padding: 20px;
 `;
 
@@ -15,7 +15,7 @@ export const User = styled.header`
   display: flex;
   flex-direction: column;
 
-  h4 {
+  a {
     color: var(--primary-text);
     font-size: 16px;
     margin-bottom: 4px;

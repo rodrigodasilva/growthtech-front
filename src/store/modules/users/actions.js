@@ -11,3 +11,15 @@ export const listSuccess = users => ({
 export const listFailure = () => ({
   type: types.LIST_FAILURE,
 });
+
+export const showUserRequest = ({ userId }) => ({
+  type: types.SHOW_REQUEST,
+  payload: { userId },
+});
+export const showSuccess = user => ({
+  type: types.SHOW_SUCCESS,
+  payload: { user },
+});
+export const showFailure = () => ({
+  type: types.SHOW_FAILURE,
+});

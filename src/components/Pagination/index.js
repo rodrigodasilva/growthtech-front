@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Button from '../Button';
 
@@ -22,6 +23,13 @@ const Paginate = ({ currentPage, lastPage, onLoadMore, isLoading }) => {
       )}
     </Container>
   );
+};
+
+Paginate.propTypes = {
+  currentPage: PropTypes.number.isRequired,
+  lastPage: PropTypes.number.isRequired,
+  onLoadMore: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 };
 
 export default Paginate;
